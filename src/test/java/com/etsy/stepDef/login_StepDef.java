@@ -1,11 +1,17 @@
 package com.etsy.stepDef;
 
 import com.etsy.pages.LoginPage;
+import com.etsy.utilities.BrowserUtil;
 import com.etsy.utilities.ConfigurationReader;
 import com.etsy.utilities.Driver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import org.openqa.selenium.WebElement;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class login_StepDef {
 
@@ -43,6 +49,26 @@ public class login_StepDef {
     public void user_verify_if_the_url_ends_with(String keyWord) {
         Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains(keyWord));
 
+
+
+    }
+
+    @Then("user clicks on ORDER")
+    public void userClicksOnORDER() {
+
+        loginPage.orderBtn.click();
+
+    }
+
+    @And("user can see the radio button to choose the card type")
+    public void userCanSeeTheRadioButtonToChooseTheCardType(List<String> expectedCardsType) {
+        List<String> actualCardsType = new ArrayList<>();
+        actualCardsType.add(loginPage.visaCard.getAttribute("value"));
+        actualCardsType.add(loginPage.masterCard.getAttribute("value"));
+        actualCardsType.add(loginPage.americanExpressCard.getAttribute("value"));
+
+
+        Assert.assertEquals(expectedCardsType,actualCardsType);
 
 
     }
