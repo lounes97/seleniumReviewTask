@@ -1,8 +1,11 @@
 package com.etsy.stepDef;
 
 import com.etsy.pages.LoginPage;
+import com.etsy.utilities.BrowserUtil;
 import com.etsy.utilities.ConfigurationReader;
 import com.etsy.utilities.Driver;
+import com.github.javafaker.Faker;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
@@ -90,10 +93,24 @@ public class login_StepDef {
         Assert.assertEquals(expectedCardsType,actualCardsType);
 
 
+    }
 
+    /**
+     * task5
+     */
 
-
+    @Then("user enter appropriate test data")
+    public void user_enter_appropriate_test_data() {
+    loginPage.nameBox.sendKeys(Faker.instance().name().firstName());
+    }
+    @Then("user clicks process order")
+    public void user_clicks_process_order() {
 
     }
+    @Then("user should see new order in view all orders table")
+    public void user_should_see_new_order_in_view_all_orders_table() {
+
+    }
+}
 
 }
