@@ -33,8 +33,28 @@ public class LoginPage {
     public WebElement americanExpressCard;
 
 
+    @FindBy(xpath = "//input[@placeholder='Full name of the customer']")
+    public WebElement nameBox;
 
+    @FindBy(xpath = "//input[@placeholder='Enter amount desired']")
+    public WebElement quantityBox;
 
+    @FindBy(css = "input[name='street']")
+    public WebElement streetBox;
+
+    @FindBy(css = "input[name='cardNo']")
+    public WebElement cardNumber;
+    @FindBy(css = "input[name='city']")
+    public WebElement cityBox;
+    @FindBy(css = "input[name='cardExp']")
+    public WebElement cardExpBox;
+    @FindBy(css = "input[name='zip']")
+    public WebElement zipBox;
+
+    @FindBy(css = "button[type='button']")
+    public WebElement calculateButton;
+    @FindBy(css = "button[type='submit']")
+    public WebElement submitButton;
 
 
 }
