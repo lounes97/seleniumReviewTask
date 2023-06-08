@@ -34,5 +34,21 @@ public class LoginPage {
     public WebElement americanExpressCard;
 
 
+    @FindBy (xpath = "//button[.='Order']")
+    public WebElement orderBtn;
+
+    @FindBy(xpath = "//input[@value='Visa']")
+    public WebElement visaCard;
+
+    @FindBy(xpath = "//input[@value='MasterCard']")
+    public WebElement masterCard;
+
+    @FindBy(xpath ="//input[@value='American Express']" )
+    public WebElement americanExpressCard;
+
+
+
+
+
 
 }

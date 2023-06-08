@@ -1,15 +1,17 @@
 package com.etsy.stepDef;
 
 import com.etsy.pages.LoginPage;
-import com.etsy.utilities.BrowserUtil;
 import com.etsy.utilities.ConfigurationReader;
 import com.etsy.utilities.Driver;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
+import io.cucumber.java.en.*;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+
+import java.util.ArrayList;
+import java.util.List;
+import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +19,7 @@ import java.util.List;
 public class login_StepDef {
 
 
-    LoginPage loginPage = new LoginPage();
+    LoginPage loginPage =new LoginPage();
 
     @Given("user open the website on home page")
     public void user_open_the_website_on_home_page() throws InterruptedException {
@@ -26,7 +28,6 @@ public class login_StepDef {
         Thread.sleep(2000);
 
     }
-
     @Then("user enter the username {string}")
     public void user_enter_the_username(String userName) throws InterruptedException {
         loginPage.userNameBox.sendKeys(userName);
@@ -34,7 +35,6 @@ public class login_StepDef {
 
 
     }
-
     @Then("user enter the password {string}")
     public void user_enter_the_password(String password) throws InterruptedException {
         loginPage.passwordBox.sendKeys(password);
@@ -42,14 +42,12 @@ public class login_StepDef {
 
 
     }
-
     @Then("user clicks login button")
     public void user_clicks_login_button() throws InterruptedException {
         loginPage.loginBtn.click();
         Thread.sleep(2000);
 
     }
-
     @Then("user verify if the URL ends with {string}")
     public void user_verify_if_the_url_ends_with(String keyWord) {
         Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains(keyWord));
@@ -72,6 +70,8 @@ public class login_StepDef {
     }
 
 
+
+
     @Then("user clicks on ORDER")
     public void userClicksOnORDER() {
 
@@ -87,7 +87,12 @@ public class login_StepDef {
         actualCardsType.add(loginPage.americanExpressCard.getAttribute("value"));
 
 
-        Assert.assertEquals(expectedCardsType, actualCardsType);
+        Assert.assertEquals(expectedCardsType,actualCardsType);
+
+
+
+
+
 
     }
 
