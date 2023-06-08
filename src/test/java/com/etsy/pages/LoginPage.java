@@ -33,20 +33,6 @@ public class LoginPage {
     @FindBy(xpath ="//input[@value='American Express']" )
     public WebElement americanExpressCard;
 
-
-    @FindBy (xpath = "//button[.='Order']")
-    public WebElement orderBtn;
-
-    @FindBy(xpath = "//input[@value='Visa']")
-    public WebElement visaCard;
-
-    @FindBy(xpath = "//input[@value='MasterCard']")
-    public WebElement masterCard;
-
-    @FindBy(xpath ="//input[@value='American Express']" )
-    public WebElement americanExpressCard;
-
-
     @FindBy(xpath = "//input[@placeholder='Full name of the customer']")
     public WebElement nameBox;
 
@@ -60,6 +46,8 @@ public class LoginPage {
     public WebElement cardNumber;
     @FindBy(css = "input[name='city']")
     public WebElement cityBox;
+    @FindBy(css = "input[name='state']")
+    public WebElement stateBox;
     @FindBy(css = "input[name='cardExp']")
     public WebElement cardExpBox;
     @FindBy(css = "input[name='zip']")
@@ -70,5 +58,10 @@ public class LoginPage {
     @FindBy(css = "button[type='submit']")
     public WebElement submitButton;
 
+    @FindBy (xpath = "//button[.='Process Order']")
+    public WebElement processOrderBox;
+
+    @FindBy(xpath = "//tr[1]/td[1]")
+    public WebElement firstColumnFromTable;
 
 }
