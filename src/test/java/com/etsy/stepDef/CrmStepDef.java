@@ -3,10 +3,12 @@ package com.etsy.stepDef;
 import com.etsy.pages.CrmPage;
 import com.etsy.utilities.ConfigurationReader;
 import com.etsy.utilities.Driver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.support.ui.Select;
 
 public class CrmStepDef {
     CrmPage crmPage = new CrmPage();
@@ -35,5 +37,19 @@ public class CrmStepDef {
     public void user_verify_error_message(String expectedMsg) {
     String actualMsg = crmPage.alertMsg.getText();
         Assert.assertEquals(expectedMsg,actualMsg);
+    }
+
+    @Then("user can see the MSG {string}")
+    public void userCanSeeTheMSG(String rememberMeExpected) {
+        String actualText = crmPage.rememberMsg.getText();
+        Assert.assertEquals(rememberMeExpected,actualText);
+
+    }
+
+    @And("user can see {string} Btn")
+    public void userCanSeeBtn(String arg0) {
+
+        Assert.assertTrue(crmPage.forgotPasswordBtn.isEnabled());
+
     }
 }

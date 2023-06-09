@@ -19,4 +19,11 @@ public class CrmPage {
 
     @FindBy(xpath = "//div[@class='errortext']")
     public WebElement alertMsg;
+
+    @FindBy(xpath = "//label[.='Remember me on this computer']")
+    public WebElement rememberMsg;
+
+    @FindBy(xpath = "//a[.='Forgot your password?']")
+    public WebElement forgotPasswordBtn;
+
 }
