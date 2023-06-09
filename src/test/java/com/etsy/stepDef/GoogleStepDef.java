@@ -9,7 +9,7 @@ import org.junit.Assert;
 import org.openqa.selenium.Keys;
 
 public class GoogleStepDef {
-    GooglePage googlePage;
+    GooglePage googlePage=new GooglePage();
     @Given("user open the google on home page")
     public void user_open_the_google_on_home_page() {
 
