@@ -6,6 +6,7 @@ Feature: NextBaseCRM practice
     And user use incorrect password "incorrect"
     And user clicks the login button
     Then user verify error message "Incorrect login or password"
+
   @crm2
     Scenario:getText and getAttribute practice
   Given user go to crm web page
