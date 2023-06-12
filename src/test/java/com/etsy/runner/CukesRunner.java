@@ -16,7 +16,8 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features" ,
         glue = "com/etsy/stepDef",
         dryRun = false,
-        tags = "@task1"
+        tags = "@forg"
+
 )
 public class CukesRunner {
 
