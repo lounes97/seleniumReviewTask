@@ -1,4 +1,5 @@
 Feature: NextBaseCRM practice
+
   @crm1
     Scenario: incorrect credentials verification
     Given user go to crm web page
