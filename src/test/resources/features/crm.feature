@@ -11,7 +11,25 @@ Feature: NextBaseCRM practice
   Given user go to crm web page
   Then user can see the MSG "Remember me on this computer"
   And user can see "Forgot your password?" Btn
+ @crm3
+  Scenario: NextBaseCRM, locators, getText(), getAttribute() practice
+  Given  user go to crm web page
+  Then verify login button as "Log In"
 
+
+
+
+
+
+
+#  TC #3: NextBaseCRM, locators, getText(), getAttribute() practice
+#  1- Open a chrome browser
+#  2- Go to: https://login1.nextbasecrm.com/
+#  3- Verify “Log in” button text is as expected:
+#  Expected: Log In
+#  PS: Inspect and decide which locator you should be using to locate web
+#  elements.
+#  PS2: Pay attention to where to get the text of this button from
 
 
 #    TC #2: NextBaseCRM, locators, getText(), getAttribute() practice

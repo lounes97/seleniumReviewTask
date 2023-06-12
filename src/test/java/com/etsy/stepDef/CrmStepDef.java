@@ -52,4 +52,10 @@ public class CrmStepDef {
         Assert.assertTrue(crmPage.forgotPasswordBtn.isEnabled());
 
     }
+
+    @Then("verify login button as {string}")
+    public void verifyLoginButtonAs(String expectedString) {
+     String actualString = crmPage.LoginBtn.getAttribute("value");
+     Assert.assertEquals(expectedString,actualString);
+    }
 }

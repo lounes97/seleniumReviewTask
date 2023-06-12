@@ -26,4 +26,7 @@ public class CrmPage {
     @FindBy(xpath = "//a[.='Forgot your password?']")
     public WebElement forgotPasswordBtn;
 
+    @FindBy(xpath = "//input[@value='Log In']")
+    public WebElement LoginBtn;
+
 }
