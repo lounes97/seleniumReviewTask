@@ -12,10 +12,9 @@ import javax.swing.*;
 
 public class CydeoPracticeStepDef {
     CydeoPracticePage cydeoPracticePage = new CydeoPracticePage() ;
-    @Given("User go to cydeo practice website")
-    public void user_go_to_cydeo_practice_website() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("cydeoPractice"));
-
+    @Given("User go to {string} website")
+    public void userGoToWebsite(String practicePage) {
+    Driver.getDriver().get(ConfigurationReader.getProperty(practicePage));
     }
     @Then("User verify the url contains {string}")
     public void user_verify_the_url_contains(String expectedUrl) {
@@ -44,4 +43,6 @@ public class CydeoPracticeStepDef {
     public void userVerifyAgainTheTitleIs(String arg0) {
         Driver.getDriver().getTitle();
     }
+
+
 }
