@@ -22,4 +22,11 @@ public class DropdownPage {
  @FindBy(xpath = "//select[@id='day']")
     public WebElement dayDropdown;
 
+ @FindBy(xpath = "//a[@id='dropdownMenuLink']")
+    public WebElement dropdownLink;
+
+ @FindBy(xpath = "//a[.='Facebook']")
+    public WebElement facebookLink;
+
+
 }

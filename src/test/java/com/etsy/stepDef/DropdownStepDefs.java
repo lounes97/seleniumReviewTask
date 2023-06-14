@@ -43,4 +43,28 @@ DropdownPage dropdownPage = new DropdownPage();
         Assert.assertEquals(expectedYear, Integer.valueOf(year.getFirstSelectedOption().getText()));
     }
 
+    @And("user select different states {string} and verify expected value is same")
+    public void userSelectDifferentStatesAndVerifyExpectedValueIsSame(String expectedState) {
+        Select state = new Select(dropdownPage.stateDropdown);
+        state.selectByVisibleText(expectedState);
+        Assert.assertEquals(expectedState,state.getFirstSelectedOption().getText());
+
+    }
+
+
+    @And("user clicks on  Dropdown link box")
+    public void userClicksOnDropdownLinkBox() {
+        dropdownPage.dropdownLink.click();
+
+    }
+
+    @And("user select Facebook webSite")
+    public void userSelectFacebookWebSite() {
+
+        dropdownPage.facebookLink.click();
+
+
+
+
+    }
 }
