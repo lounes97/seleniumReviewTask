@@ -50,3 +50,15 @@ Feature: dropDown functionality
 #  5. Select California
 #  6. Verify final selected option is California.
 #  Use all Select options. (visible text, value, index)
+
+Scenario: Selecting value from Select a website
+  And user clicks on  Dropdown link box
+  And user select Facebook webSite
+  Then User verify the title is "Facebook - log in or sign up"
+
+#  TC #8: Selecting value from non-select dropdown
+#  1. Open Chrome browser
+#  2. Go to https://practice.cydeo.com/dropdown
+#  3. Click to non-select dropdown
+#  4. Select Facebook from dropdown
+#  5. Verify title is “Facebook - Log In or Sign Up”

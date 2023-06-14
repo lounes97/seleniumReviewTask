@@ -49,6 +49,21 @@ DropdownPage dropdownPage = new DropdownPage();
         state.selectByVisibleText(expectedState);
         Assert.assertEquals(expectedState,state.getFirstSelectedOption().getText());
 
+    }
+
+
+    @And("user clicks on  Dropdown link box")
+    public void userClicksOnDropdownLinkBox() {
+        dropdownPage.dropdownLink.click();
+
+    }
+
+    @And("user select Facebook webSite")
+    public void userSelectFacebookWebSite() {
+
+        dropdownPage.facebookLink.click();
+
+
 
 
     }
