@@ -31,3 +31,22 @@ Feature: dropDown functionality
   #Select year using : visible text
   #Select month using : value attribute
   #Select day using : index number
+
+
+
+  Scenario Outline: Selecting state from State dropdown and verifying result
+  And user select different states "<State>" and verify expected value is same
+  Examples:
+  |State|
+  |Illinois|
+  |Virginia|
+  |California|
+
+#  TC #7: Selecting state from State dropdown and verifying result
+#  1. Open Chrome browser
+#  2. Go to http://practice.cybertekschool.com/dropdown
+#  3. Select Illinois
+#  4. Select Virginia
+#  5. Select California
+#  6. Verify final selected option is California.
+#  Use all Select options. (visible text, value, index)
