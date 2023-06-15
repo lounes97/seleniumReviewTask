@@ -14,5 +14,9 @@ public JSAlertPage(){
     public WebElement JSAlertBtn;
 @FindBy(xpath = "//p[@id='result']")
     public WebElement SuccessfulMsg;
+@FindBy(xpath = "//button[.='Click for JS Confirm']")
+    public WebElement JSConfirmBtn;
+@FindBy(xpath = "//button[@onclick='jsPrompt()']")
+    public WebElement JSPromptBtn;
 
 }
