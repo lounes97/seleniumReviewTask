@@ -5,6 +5,7 @@ import com.etsy.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
@@ -17,6 +18,9 @@ public class Hooks {
         Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         Driver.getDriver().manage().window().maximize();
         //Driver.getDriver().get(ConfigurationReader.getProperty("browser"));
+
+        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
+
 
     }
 
